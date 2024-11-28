@@ -94,6 +94,40 @@ a:hover{
 	}
 }
 
+
+//show+hide
+.pc_show{
+	display: block !important;
+}
+.mobile_show{
+	display: none !important;
+}
+@media (max-width: 768px) {
+	.pc_show{
+		display: none;
+	}
+	.mobile_show{
+		display: block;
+		position: relative;
+		background: $white-color;
+		height: 4em;
+		width: 100%;
+		box-sizing: border-box;
+		text-align: left;
+		z-index: 9999;
+		box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.15);
+		padding: 0.8em 1em 0 1em;
+		a{
+			display: inline-block;
+			height: 2em;
+			img {
+			height: 100%;
+			width: auto;
+			}
+		}
+	}
+}
+
 //title
 .tit{
 	text-align: center;
@@ -521,6 +555,9 @@ header {
 			.box{
 				width: 90%;
 				margin-bottom: 50px;
+				h2{
+					font-size: 1.5rem;
+				}
 			}
 			.box:last-child{
 				margin-bottom: 0px;
@@ -711,7 +748,7 @@ header {
 						line-height: 1.4;
 					}
 				} 
-				.schedule02,.schedule03{
+				.schedule02,.schedule03,.schedule04{
 					display: flex;
 					flex-direction: column;
 					.subject{
@@ -727,11 +764,6 @@ header {
 						}
 					}
 				}
-			}
-			.form{
-				// position: absolute;
-				// top: -800px;
-				// height: 1500px;
 			}
 		}
 	}

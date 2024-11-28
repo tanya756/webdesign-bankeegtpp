@@ -76,6 +76,41 @@ a:hover.cta_button {
   color: #2147ad;
 }
 
+.pc_show {
+  display: block !important;
+}
+
+.mobile_show {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .pc_show {
+    display: none;
+  }
+  .mobile_show {
+    display: block;
+    position: relative;
+    background: #fff;
+    height: 4em;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: left;
+    z-index: 9999;
+    -webkit-box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.15);
+    padding: 0.8em 1em 0 1em;
+  }
+  .mobile_show a {
+    display: inline-block;
+    height: 2em;
+  }
+  .mobile_show a img {
+    height: 100%;
+    width: auto;
+  }
+}
 .tit {
   text-align: center;
   z-index: 1;
@@ -604,6 +639,9 @@ header a img {
     width: 90%;
     margin-bottom: 50px;
   }
+  .benefit_content .box h2 {
+    font-size: 1.5rem;
+  }
   .benefit_content .box:last-child {
     margin-bottom: 0px;
   }
@@ -815,7 +853,7 @@ header a img {
   font-size: 1rem;
   line-height: 1.4;
 }
-.join_content_box .information .schedule02, .join_content_box .information .schedule03 {
+.join_content_box .information .schedule02, .join_content_box .information .schedule03, .join_content_box .information .schedule04 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -824,7 +862,7 @@ header a img {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.join_content_box .information .schedule02 .subject, .join_content_box .information .schedule03 .subject {
+.join_content_box .information .schedule02 .subject, .join_content_box .information .schedule03 .subject, .join_content_box .information .schedule04 .subject {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -833,11 +871,11 @@ header a img {
           justify-content: space-between;
   margin: 10px 0;
 }
-.join_content_box .information .schedule02 .subject .subjectname, .join_content_box .information .schedule03 .subject .subjectname {
+.join_content_box .information .schedule02 .subject .subjectname, .join_content_box .information .schedule03 .subject .subjectname, .join_content_box .information .schedule04 .subject .subjectname {
   color: #383131;
   font-weight: 900;
 }
-.join_content_box .information .schedule02 .subject .speaker, .join_content_box .information .schedule03 .subject .speaker {
+.join_content_box .information .schedule02 .subject .speaker, .join_content_box .information .schedule03 .subject .speaker, .join_content_box .information .schedule04 .subject .speaker {
   color: #9b6f2d;
 }
 @media (max-width: 1024px) {
