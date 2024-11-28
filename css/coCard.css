@@ -744,6 +744,7 @@ header a img {
   color: #fff;
   margin: 10px 0;
   font-size: 1.5rem;
+  line-height: 1.6;
 }
 .step_content .carousel .slide img {
   margin-top: 50px;
