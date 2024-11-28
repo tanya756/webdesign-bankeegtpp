@@ -18,6 +18,7 @@ $bg_color: linear-gradient(-45deg, #252F51 0%, #253053 34%, #2D4087 100%);
 html {
 	font-size: 16px; /* 桌面版基準字體大小 */
 	color: $primary_color;
+	scroll-behavior: smooth;
 }
 @media screen and (max-width: 1024px) {
     html {
@@ -104,6 +105,9 @@ a:hover{
 		margin-bottom: 1.5rem;
 		color: $secondary_color;
 		transform: skew(-15deg);
+		img{
+			margin-left: 10px;
+		}
 	}
 	&_subtitle {
 		font-size: 1.5rem;
@@ -111,11 +115,14 @@ a:hover{
 	}
 	@media (max-width: 768px) {
 		&_maintitle {
-			font-size: 2.5rem;
+			font-size: 2rem;
 			margin-bottom: 0rem;
 			line-height: 1.6;
 			width: 80%;
         	margin: auto;
+			img{
+				display: none;
+			}
 		}
 		&_subtitle {
 			font-size: 1.5rem;
@@ -638,9 +645,11 @@ header {
 	.title{
 		background: 
 		linear-gradient(to bottom, #12307c 33%, #12307c 69.5%, rgba(0, 0, 0, 0) 69.5%, rgba(0, 0, 0, 0) 100%) left / 50% 100% no-repeat, 
-		linear-gradient(to bottom, rgb(0 0 0 / 0%) 33%, rgb(0 0 0 / 0%) 59.5%, #193e9b 59.5%, #193e9b 100%) right / 50% 100% no-repeat;
-
-		margin: auto;
+		linear-gradient(to bottom, rgb(0 0 0 / 0%) 33%, rgb(0 0 0 / 0%) 59.5%, #193e9b 59.5%, #193e9b 100%) right / 50% 100% no-repeat;	
+		img{
+			margin: auto;
+    		display: block;
+		}
 	}
 	&_content {
 		width: 1024px;
@@ -784,7 +793,7 @@ header {
 		  display: flex;
 		  align-items: center;
 		  justify-content: center;
-		  gap: 20px;
+		  gap: 40px;
 		  flex-wrap: wrap;
 		}
 		
@@ -795,7 +804,7 @@ header {
 		}
 		
 		&_logo {
-		  height: 48px;
+		  height: 30px;
 		  width: auto;
 		  object-fit: contain;
 		}
@@ -820,7 +829,7 @@ header {
 		  }
 		  
 		  &_logo {
-			height: 36px;
+			height: 20px;
 		  }
 		  
 		  &_multiply {
