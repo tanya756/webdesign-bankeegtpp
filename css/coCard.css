@@ -70,6 +70,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.25rem;
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .cta_button {
+    padding: 1rem 1.5rem;
+  }
+}
 
 a:hover.cta_button {
   background: #f2ce98;
