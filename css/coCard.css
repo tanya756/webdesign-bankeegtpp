@@ -82,11 +82,11 @@ a:hover.cta_button {
 }
 
 .pc_show {
-  display: block !important;
+  display: block;
 }
 
 .mobile_show {
-  display: none !important;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -95,25 +95,6 @@ a:hover.cta_button {
   }
   .mobile_show {
     display: block;
-    position: relative;
-    background: #fff;
-    height: 4em;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    text-align: left;
-    z-index: 9999;
-    -webkit-box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.15);
-            box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.15);
-    padding: 0.8em 1em 0 1em;
-  }
-  .mobile_show a {
-    display: inline-block;
-    height: 2em;
-  }
-  .mobile_show a img {
-    height: 100%;
-    width: auto;
   }
 }
 .tit {
@@ -456,6 +437,11 @@ header a img {
     width: 100%;
   }
 }
+@media (max-width: 1024px) {
+  .intro_content {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .intro_content {
     -webkit-box-orient: vertical;
@@ -483,6 +469,9 @@ header a img {
   color: #2147ad;
   font-size: 1.625rem;
   margin-left: -220px;
+}
+.benefit .tit p img {
+  display: inline-block;
 }
 .benefit_content {
   width: 1366px;

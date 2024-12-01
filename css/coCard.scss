@@ -100,10 +100,10 @@ a:hover{
 
 //show+hide
 .pc_show{
-	display: block !important;
+	display: block;
 }
 .mobile_show{
-	display: none !important;
+	display: none;
 }
 @media (max-width: 768px) {
 	.pc_show{
@@ -111,23 +111,23 @@ a:hover{
 	}
 	.mobile_show{
 		display: block;
-		position: relative;
-		background: $white-color;
-		height: 4em;
-		width: 100%;
-		box-sizing: border-box;
-		text-align: left;
-		z-index: 9999;
-		box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.15);
-		padding: 0.8em 1em 0 1em;
-		a{
-			display: inline-block;
-			height: 2em;
-			img {
-			height: 100%;
-			width: auto;
-			}
-		}
+		// position: relative;
+		// background: $white-color;
+		// height: 4em;
+		// width: 100%;
+		// box-sizing: border-box;
+		// text-align: left;
+		// z-index: 9999;
+		// box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.15);
+		// padding: 0.8em 1em 0 1em;
+		// a{
+		// 	display: inline-block;
+		// 	height: 2em;
+		// 	img {
+		// 	height: 100%;
+		// 	width: auto;
+		// 	}
+		// }
 	}
 }
 
@@ -399,6 +399,11 @@ header {
 			width: 100%; 
 		}
 	}
+	@media (max-width: 1024px) {
+		&_content {
+			width: 100%;
+		}
+	}
 	@media (max-width: 768px) {
 		&_content {
 			flex-direction: column;
@@ -424,6 +429,9 @@ header {
 			color: $blue_light_color;
 			font-size: 1.625rem;
 			margin-left: -220px;
+			img{
+				display: inline-block;
+			}
 		}
 	} 
 	&_content {
