@@ -4,10 +4,12 @@ $block_color: #000;
 $gray_color:#757575;
 $gray_deep_color:#383131;
 $blue_color:#162035;
+$green_color: #30a235;
 $blue_light_color:#2147ad;
 $primary_color: #4aa0f8;
 $secondary_color: #f2ce98;
 $secondary_light_color:#ffe8b9;
+$secondary_light_light_color: #f0dab8;
 $bg_color: linear-gradient(-45deg, #252F51 0%, #253053 34%, #2D4087 100%);
 
 * {
@@ -98,6 +100,17 @@ a:hover{
 }
 
 
+
+.joinbtn{
+	background-color: $white-color;
+	color: $blue_light_color;
+	text-align: center;
+	width: 300px;
+}
+.joinbtn:hover{
+	background: $secondary_color;
+	color: $blue_light_color;
+}
 //show+hide
 .pc_show{
 	display: block;
@@ -690,6 +703,96 @@ header {
 	}
 }
 
+.line{
+	background-color: $secondary_light_light_color;
+	&_content{
+		display: flex;
+		gap: 60px;
+		color: $green_color;
+		justify-content: center;
+    	align-items: center;
+		// margin: -53px auto;
+	}
+	.cellphone{
+		z-index: 999;
+		position: relative;
+		margin-top: -50px;
+	}
+	.QRcode{	
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		p{
+			font-size: 1.125rem;
+			margin-top: 1rem;
+		}
+	}
+	.text{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		h3{
+			font-size: 2rem;
+			color: $block_color;
+		}
+		p{
+			color: $block_color;
+			font-size: 1.125rem;
+			margin: 1rem auto;
+			width: 300px;
+			line-height: 1.6;
+		}
+		.cta_button{
+			background-color: $green_color;
+			border: none;
+		}
+		a:hover{
+			&.cta_button{
+				background: linear-gradient(to top, #075c0c,#5fbb63);
+				color: $white_color;
+			}
+		}
+	}
+	@media (max-width: 1200px) {
+		&_content{
+			width: 90%;
+			gap: 30px;
+			margin: auto;
+		}
+		.cellphone img{
+			width: 100%;
+		}
+		.QRcode img{
+			width: 100%;
+		}
+	}
+	@media (max-width: 768px) {
+		// padding-bottom: 60px;
+		&_content {
+			flex-direction: column-reverse;	
+			gap: 0;		
+		}
+		.QRcode{
+			display: none;
+		}
+		.cellphone{
+			width: 100%;
+			top: 0;
+			margin-top: 50px;
+			img{
+				width: 70%;
+				margin: auto;
+				display: block;
+			}
+		}
+		.text{
+			margin-top: 50px;
+		} 
+	}
+}
+
 .join{
 	.title{
 		background: 
@@ -883,6 +986,20 @@ header {
 	  }
 }
 
+.apply {
+	position: fixed;
+	right: 20px;
+	bottom: 100px;
+	z-index: 9999;
+}
+.apply a:hover {
+	opacity: 0.6;
+}
+@media (max-width: 768px) {
+	.apply {
+		right: 5px;
+	}
+}
 .share{
 	position: fixed;
 	right: 20px;
@@ -896,7 +1013,12 @@ header {
 	}
 }
 
-
+.carousel {
+	display: none;
+}
+.carousel.active {
+display: block; /* 或 display: flex; 根據你的佈局 */
+}
 
 
     
